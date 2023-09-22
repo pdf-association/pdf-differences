@@ -6,15 +6,11 @@
 &nbsp;&nbsp;&nbsp;
 ![YouTube Channel Subscribers](https://img.shields.io/youtube/channel/subscribers/UCJL_M0VH2lm65gvGVarUTKQ?style=social)
 
-This is a _private_ (PDF Association member-only) repository for responsible reporting of commonly-seen PDF issues to PDF Association members prior to any public disclosure. It is intended to allow PDF Association members to test and address any potential implementation issues within a fixed but reasonable timeframe of 60 days before wider public discussion and dissemination. The PDF files in this repository are targeted test files highlighting specific issues seen across multiple widely-used implementations. Implementations at fault will **not** be named or identified - it is a member responsibility to assess their own technology.
+This is a _public_ (repository for responsible reporting of commonly-seen PDF issues. The PDF files in this repository are targeted test files highlighting specific issues seen across multiple widely-used implementations. Implementations at fault will **not** be named or identified.
 
 The issues identified in this repository are **not** security related - they impact portability and interoperability; PDF's "prime directive"!
 
-Detailed documentation for each test case is provided as MarkDown files and in an associated article on https://www.pdfa.org. Access to this documentation will be restricted to PDF Association members for 60 days (the "responsible reporting period") before being made public, as communicated via email to PDF Association members.
-
-Once 60 days have passed PDF files in this repository are _moved_ to the public repository `pdf-differences` with the associated article on https://www.pdfa.org updated accordingly. By _moving_ the PDF test files, development teams can monitor this members-only repository knowing that there is a 60 day window to successfully process all files contained therein. This approach avoids any potential divergence of test files between this members-only and the public `pdf-differences` repositories.
-
-The issues demonstrated by PDF files in this repository may be discussed in any [PDF Association TWG](https://pdfa.org/community/), as TWGs, unlike LWGs, are member-only forums. Please do not post any information publicly until the 60 day responsible reporting period has passed.
+Detailed documentation for each test case is provided as MarkDown files and in an associated article on https://www.pdfa.org. 
 
 # The PDF test files
 
