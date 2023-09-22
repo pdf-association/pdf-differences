@@ -1,0 +1,78 @@
+%PDF-1.7
+%%μῦ
+%
+% Copyright 2023 PDF Association, Inc. https://www.pdfa.org
+%
+1 0 obj
+<<
+  /Type /Catalog
+  /Pages 2 0 R
+>>
+endobj
+
+2 0 obj
+<<
+  /Type /Pages
+  /Kids [ 3 0 R ]
+  /Count 1
+  /Resources <<
+    /Font << /FZapf 4 0 R >>
+  >>
+>>
+endobj
+
+3 0 obj
+<<
+  /Type /Page
+  /Parent 2 0 R
+  /MediaBox [ 0 0 300 100 ]
+  /Contents 5 0 R
+>>
+endobj
+
+4 0 obj
+<<
+  /Type /Font
+  /Subtype /Type1
+  /BaseFont /ZapfDingbats
+  % Open scissors is \042 or \044 (octal)
+>>
+endobj
+
+5 0 obj
+<<
+  /Length 432
+>>
+stream
+    % VERY large pair of open scissors
+    BT
+         /FZapf 88 Tf
+         1 0 0 1 75 10 Tm
+         (\042) Tj
+    ET
+    
+	1 0 0 RG    % red stroke
+    6 w         % line width
+    % dash a line with negative phase to avoid open mouth of scissors
+    [ 10 5 60 50 ] -20 d
+    0 40 m 300 40 l S
+
+    [] 0 d    % solid line
+    0 w       % narrowest hairline as possible
+    0 0 1 RG  % blue
+   %0 40 m 300 40 l S
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f
+0000000084 00000 n
+0000000138 00000 n
+0000000254 00000 n
+0000000352 00000 n
+0000000475 00000 n
+trailer
+<< /Root 1 0 R /Size 6 >>
+startxref
+960 
+%%EOF

@@ -1,0 +1,74 @@
+%PDF-1.7
+%%μῦ
+%
+% Copyright 2023 PDF Association, Inc. https://www.pdfa.org
+%
+% ISO 32000-2:2020 subclause 8.4.3.6 "Line dash pattern" had a critically important sentence added 
+% to the second last paragraph:
+%  If the end of a dashed segment coincides exactly with a join point, then the end cap is painted before the corner.
+%
+1 0 obj
+<<
+  /Type /Catalog
+  /Pages 2 0 R
+>>
+endobj
+
+2 0 obj
+<<
+  /Type /Pages
+  /Kids [ 3 0 R ]
+  /Count 1
+  /Resources << >>
+>>
+endobj
+
+3 0 obj
+<<
+  /Type /Page
+  /Parent 2 0 R
+  /MediaBox [ 0 0 300 300 ]
+  /Contents 4 0 R
+>>
+endobj
+
+4 0 obj
+<<
+  /Length 369
+>>
+stream
+    % blue page
+    0 0 1 rg % blue   
+    0 0 300 300 re f
+
+	% white box in centre
+    1 1 1 rg % red fill
+    50 50 200 200 re f
+
+    10 w     % wide stroke
+    0 0 0 RG % black stroke
+    1 J      % round dash cap
+    [10 20] 0 d
+     55  55 m
+     55 245 l
+    245 245 l
+    245  55 l 
+     55  55 l
+    s       % s = close and stroke, S = stroke
+endstream
+endobj
+xref
+0 5
+0000000000 65535 f
+0000000340 00000 n
+0000000394 00000 n
+0000000479 00000 n
+0000000577 00000 n
+trailer
+<<
+/Size 5
+/Root 1 0 R
+>>
+startxref
+998
+%%EOF

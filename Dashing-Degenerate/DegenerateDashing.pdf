@@ -1,0 +1,146 @@
+%PDF-1.7
+%‚„œ”
+%
+% Copyright 2023 PDF Association, Inc. https://www.pdfa.org
+%
+% ISO 32000-2:2020 subclause 8.4.3.4 Line join style
+%
+% In a closed subpath that is dashed, if the first segment starts with an on-dash and the last segment ends
+% within an on-dash, then they shall be joined.
+%
+%
+% ISO 32000-2:2020 subclause 8.4.3.6 Line dash pattern:
+%
+% The new "End before Bend" rule"
+% If the end of a dashed segment coincides exactly with a join point, then the end cap is painted before the corner.
+% 
+% New NOTE:
+% NOTE As noted in 8.5.3.2, "Stroking" and in "Table 58 ó Path construction operators", closed paths
+%      have no end caps, but the individual dash segments of a path stroked using a non-empty line
+%      dash pattern are individually open paths and therefore receive end cap processing as specified in
+%      the graphics state. If any dash segment includes a corner then that corner is painted using the
+%      current join style in the graphics state. If a corner is not contained within any dashed segment
+%      the corner is not painted.
+%
+
+1 0 obj % Document catalog
+<<
+    /Type /Catalog
+    /Pages 2 0 R
+>>
+endobj
+
+2 0 obj % Page tree root node
+<<
+    /Type   /Pages
+    /Kids   [ 3 0 R ]
+    /Count  1
+>>
+endobj
+
+3 0 obj % Page object
+<<
+    /Type       /Page
+    /Parent     2 0 R
+    /MediaBox   [ 0 0 800 800 ]
+    /Contents   4 0 R
+    /Resources  << 
+        /Font << /F1 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >> >> 
+    >>
+>>
+endobj
+
+4 0 obj % Page Content stream
+<<
+    /Length 2400 
+>>
+stream
+    % Explanatory text
+    BT
+         /F1 9 Tf
+         1 0 0 1 20 275 Tm
+         (Round line join. 5 w. [ 10 10 ] 0 d. 200  x 45 re S ("re" is implicitly closed). Total line length = 490.) Tj
+         1 0 0 1 20 255 Tm
+         (Last gap finishes at 480, therefore 480 to 490 is 10 unit on. Start is always lower left corner.) Tj
+         1 0 0 1 20 235 Tm
+         (Right shape is 200 x 44 re S. Same graphics state and painting operators. Total line length = 488.) Tj
+    ET
+
+    5 w          % Line width
+    1 j          % Round line join style
+    [10 10] 0 d  % Dash array and phase
+
+    BT
+         /F1 8 Tf
+         1 0 0 1  60 505 Tm
+         (Butt cap, 45 high x 200 wide) Tj
+         1 0 0 1 360 505 Tm
+         (Butt cap, 44 high x 200 wide) Tj
+    ET
+
+    % Lower-left corner should NOT have line join, as "end before bend"
+    0 J          % Butt cap
+     50 500 200 45 re S
+    350 500 200 44 re S
+
+    BT
+         /F1 8 Tf
+         1 0 0 1  60 605 Tm
+         (Round cap, 45 high x 200 wide) Tj
+         1 0 0 1 360 605 Tm
+         (Round cap, 44 high x 200 wide) Tj
+    ET
+
+    % NOTE: Round line cap mimicks line round join style at lower left corner!!
+    1 J   % Round line cap
+     50 600 200 45 re S
+    350 600 200 44 re S
+
+    BT
+         /F1 8 Tf
+         1 0 0 1  60 705 Tm
+         (Projecting square cap, 45 high x 200 wide) Tj
+         1 0 0 1 360 705 Tm
+         (Projecting square cap, 44 high x 200 wide) Tj
+    ET
+
+    % Lower-left corner should NOT have line join, as "end before bend"
+    2 J   % Projecting square Cap
+     50 700 200 45 re S
+    350 700 200 44 re S
+
+    BT
+         /F1 8 Tf
+         1 0 0 1  60 405 Tm
+         (Projecting square cap, 50 high x 200 wide) Tj
+         1 0 0 1 360 405 Tm
+         (Projecting square cap, 49 high x 200 wide) Tj
+    ET
+
+    % Lower-left corner should NOT have line join, as "end before bend"
+    2 J   % Projecting square Cap
+     50 400 200 50 re S
+    350 400 200 49 re S
+
+    % Draw red centre lines along bottom edge of the left rectangles = exact length of "on" dashes and visualize dash end caps
+    0 w             % narrow line
+    0 J             % butt cap so precise "on" dash length
+    1 0 0 RG        % Stroking color = red
+    50 400 m 250 400 l S
+    50 500 m 250 500 l S
+    50 600 m 250 600 l S
+    50 700 m 250 700 l S
+endstream
+endobj
+xref
+0 5
+0000000000 65535 f
+0000001092 00000 n
+0000001176 00000 n
+0000001283 00000 n
+0000001536 00000 n
+trailer
+<< /Root 1 0 R /Size 5 >>
+startxref
+4021
+%%EOF

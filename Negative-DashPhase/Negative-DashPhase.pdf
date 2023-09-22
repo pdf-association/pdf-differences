@@ -1,0 +1,189 @@
+%PDF-1.7
+%%μῦ
+%
+% Copyright 2022 PDF Association, Inc. https://www.pdfa.org
+%
+% ISO 32000-1:2008
+% 8.4.3.6 Line dash pattern
+% The dash phase shall specify the distance into the dash pattern at which to start the dash.
+% As can be seen from the table, an empty dash array and zero phase can be used to restore the
+% dash pattern to a solid line.
+%
+% ISO 32000-2:2020
+% 8.4.3.6 Line dash pattern
+% The dash phase shall be a number that specifies the distance into the dash pattern at which
+% to start the dash. If the dash phase is negative, it shall be incremented by twice the sum
+% of all lengths in the dash array until it is positive. The elements of both the dash array
+% and the dash phase shall be expressed in user space units.
+%
+% If the dash array is empty, the dash phase shall be zero and the path shall be stroked with
+% a solid, unbroken line.
+%
+1 0 obj
+<<
+  /Type /Catalog
+  /Pages 2 0 R
+>>
+endobj
+
+2 0 obj
+<<
+  /Type /Pages
+  /Kids [ 3 0 R ]
+  /Count 1
+  /Resources <<
+    /Font << /F1 4 0 R >>
+  >>
+>>
+endobj
+
+3 0 obj
+<<
+  /Type /Page
+  /Parent 2 0 R
+  /MediaBox [ 0 0 600 850 ]
+  /Contents 5 0 R
+>>
+endobj
+
+4 0 obj
+<<
+  /Type /Font
+  /Subtype /Type1
+  /BaseFont /Helvetica
+>>
+endobj
+
+5 0 obj
+<<
+  /Length 2248
+>>
+stream
+	2 0 0 2 0 0 cm
+
+    % some vertical lines for alignment
+    0 w
+	20 0 m 20 850 l S
+	30 0 m 30 850 l S
+	40 0 m 40 850 l S
+	50 0 m 50 850 l S
+	60 0 m 60 850 l S
+	70 0 m 70 850 l S
+	80 0 m 80 850 l S
+	90 0 m 90 850 l S
+
+
+	1 0 0 RG    % red stroking
+    5 w         % line width
+    
+    [ 10 10 ] 0 d
+    20 350 m 400 350 l S
+    BT
+         /F1 6 Tf
+         1 0 0 1 20 355 Tm
+         ([ 10 10 ] 0 d reference) Tj
+    ET    
+    
+    [ 10 10 ] -1 d
+    20 330 m 400 330 l S
+    BT
+         /F1 6 Tf
+         1 0 0 1 20 335 Tm
+         ([ 10 10 ] -1 d) Tj
+    ET    
+
+    % on off on off on
+    [ 20  0   0  10 10 ] 0 d
+    20 310 m 400 310 l S
+    BT
+         /F1 6 Tf
+         1 0 0 1 20 315 Tm
+         ([ 20 0 0 10 10 ] 0 d) Tj
+    ET    
+
+    % on off on off on
+    [ 20  0   0  10 10] -1 d
+    20 290 m 400 290 l S
+    BT
+         /F1 6 Tf
+         1 0 0 1 20 295 Tm
+         ([ 20 0 0 10 10 ] -1 d) Tj
+    ET    
+
+    % on off on off on
+    [ 20  0   0  10 10] -2 d
+    20 270 m 400 270 l S
+    BT
+         /F1 6 Tf
+         1 0 0 1 20 275 Tm
+         ([ 20 0 0 10 10 ] -2 d) Tj
+    ET    
+
+    % on off on off on
+    [ 20  0   0  10 10] -3 d
+    20 250 m 400 250 l S
+    BT
+         /F1 6 Tf
+         1 0 0 1 20 255 Tm
+         ([ 20 0 0 10 10 ] -3 d) Tj
+    ET    
+
+    % on off on off on
+    [ 20  0   0  10 10] -4 d
+    20 230 m 400 230 l S
+    BT
+         /F1 6 Tf
+         1 0 0 1 20 235 Tm
+         ([ 20 0 0 10 10 ] -4 d) Tj
+    ET    
+
+    % on off on off on
+    [ 20  0   0  10 10] -5 d
+    20 210 m 400 210 l S
+    BT
+         /F1 6 Tf
+         1 0 0 1 20 215 Tm
+         ([ 20 0 0 10 10 ] -5 d) Tj
+    ET    
+
+    % on off on off on
+    [ 20  0   0  10 10] -6 d
+    20 190 m 400 190 l S
+    BT
+         /F1 6 Tf
+         1 0 0 1 20 195 Tm
+         ([ 20 0 0 10 10 ] -6 d) Tj
+    ET    
+
+    % on off on off on
+    [ 20  0   0  10 10] -7 d
+    20 170 m 400 170 l S
+    BT
+         /F1 6 Tf
+         1 0 0 1 20 175 Tm
+         ([ 20 0 0 10 10 ] -7 d) Tj
+    ET    
+
+    % empty array
+    [ ] -1 d
+    20 100 m 400 100 l S
+    BT
+         /F1 6 Tf
+         1 0 0 1 20 105 Tm
+         ([ ] -1 d empty array) Tj
+    ET    
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f
+0000000867 00000 n
+0000000921 00000 n
+0000001034 00000 n
+0000001132 00000 n
+0000001209 00000 n
+trailer
+<< /Root 1 0 R /Size 6 >>
+startxref
+3512
+%%EOF

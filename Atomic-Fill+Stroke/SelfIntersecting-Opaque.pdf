@@ -1,0 +1,84 @@
+%PDF-1.7
+%‚„œ”
+%
+% Copyright 2023 PDF Association, Inc. https://www.pdfa.org
+%
+% Self-intersecting shape with opaque fill and stroke colours, using both winding rules.
+%
+
+1 0 obj % Document Catalog
+<<
+    /Type /Catalog
+    /Outlines 2 0 R
+    /Pages 3 0 R
+>>
+endobj
+
+2 0 obj % No outlines (bookmarks)
+<<
+    /Type /Outlines
+    /Count 0
+>>
+endobj
+
+3 0 obj % Page tree root with single page
+<<
+    /Type /Pages
+    /Kids [ 4 0 R]
+    /Count 1
+>>
+endobj
+
+4 0 obj % Page object
+<<
+    /Type /Page
+    /Parent 3 0 R
+    /MediaBox [ 0 0 1500 1000 ] % Page size
+    /Resources << >> % No resources
+    /Contents 5 0 R
+>>
+endobj
+
+5 0 obj % Page Content stream
+<<
+    /Length 497 
+>>
+stream
+20 w       % thick line width for stroking
+1 0 0 rg   % red fill
+0 1 0 RG   % green stroke
+1 j        % Round line join
+
+% Star-shape (self-intersecting shape)
+100	100 m
+550	550 l
+20  550 l
+540 50  l
+270 700 l
+b*         % close, fill and stroke using Odd/Even Rule
+
+2 j        % Bevel line join
+10 M       % Mitre limit
+
+% Star Shape (self-intersecting shape)  
+ 800 100 m
+1350 550 l
+ 720 550 l
+1340 50  l
+ 970 700 l
+b          % close, fill and stroke using Non-Zero Rule
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f
+0000000179 00000 n
+0000000284 00000 n
+0000000372 00000 n
+0000000485 00000 n
+0000000665 00000 n
+trailer
+<< /Root 1 0 R /Size 6 >>
+startxref
+1246
+%%EOF

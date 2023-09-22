@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+
+<h2>Semi-transparent fill and stroke: no interaction at self-intersection points:</h2>
+
+<svg xmlns="http://www.w3.org/2000/svg"
+    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    width="720" height="720">
+
+ <path d="M 100 100 L 550 550 L 20 550 L 540 50 L 270 700 Z"
+  fill="rgb(255,0,0)" fill-opacity="0.5" fill-rule="evenodd"
+  stroke="rgb(0,255,0)" stroke-width="20" stroke-opacity="0.3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 7"/>
+  Sorry, your browser does not support inline SVG.
+</svg>
+
+<h2>Opaque fill, semi-transparent stroke --> is stroke UNDER or ON TOP of fill?:</h2>
+
+<svg xmlns="http://www.w3.org/2000/svg"
+    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    width="720" height="720">
+
+ <path d="M 100 100 L 550 550 L 20 550 L 540 50 L 270 700 Z"
+  fill="rgb(255,0,0)" fill-opacity="1.0" fill-rule="evenodd"
+  stroke="rgb(0,255,0)" stroke-width="20" stroke-opacity="0.3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 7"/>
+  Sorry, your browser does not support inline SVG.
+</svg>
+
+<h2>Semi-transparent fill, opaque stroke --> stroke is clearly ON TOP of fill:</h2>
+
+<svg xmlns="http://www.w3.org/2000/svg"
+    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    width="720" height="720">
+
+ <path d="M 100 100 L 550 550 L 20 550 L 540 50 L 270 700 Z"
+  fill="rgb(255,0,0)" fill-opacity="0.5" fill-rule="evenodd"
+  stroke="rgb(0,255,0)" stroke-width="20" stroke-opacity="1.0" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 7"/>
+  Sorry, your browser does not support inline SVG.
+</svg>
+
+<h2>Semi-transparent fill, opaque stroke with pre-multiplied alpha --> stroke is still ON TOP of fill but color simulates PDF appearance:</h2>
+
+<svg xmlns="http://www.w3.org/2000/svg"
+    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    width="720" height="720">
+
+ <path d="M 100 100 L 550 550 L 20 550 L 540 50 L 270 700 Z"
+  fill="rgb(255,0,0)" fill-opacity="0.5" fill-rule="evenodd"
+  stroke="rgba(177,255,177)" stroke-width="20" stroke-opacity="1.0" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 7"/>
+  Sorry, your browser does not support inline SVG.
+</svg>
+
+</body>
+</html>

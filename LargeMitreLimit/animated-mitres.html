@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>PDF Mitre Limit animation</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta property="og:title" content="PDF Mitre Limit animation">
+    <meta name="author" content="info@pdfa.com">
+    <meta property="og:locale" content="en_US">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<main class="page-content" aria-label="Content">
+
+<script>
+    // Global constants and variables
+    const TIMER     = 200;      // in milliseconds
+    const VERTEX_X  = 200.0;    // Fixed centre point where lines meet and mitre might happen
+    const VERTEX_Y  = 200.0;    // Fixed centre point where lines meet and mitre might happen
+    const STEP_SIZE = 2;        // Step size for moving ends: 1, 2, 5 and 10 are good choices
+
+    var timerId;                // Timer ID from setInterval() so can pause/run
+    var running = true;         // Pause or run
+    var line_width = 30;        // Line width of stroke - must be > 0.
+    var set_mitre_ratio = 4.0;  // Mitre limit RATIO that is in effect in SVG paths
+    var ends_gap = 180;         // Half the width of base of V-path (i.e. add/subtract from VERTEX_X)
+    var end_step = -STEP_SIZE;  // Sign (+/-) will alter if expanding (+) /contracting (-) V-path
+
+    function update() {
+        if (running) {
+            // Update data from input fields
+            line_width = parseFloat(document.getElementById("line_width_value").value); 
+            set_mitre_ratio = parseFloat(document.getElementById("mitre_limit_ratio_value").value); 
+
+            // Work out angle theta (in radians) between the 2 lines being mitred
+            var current_theta_rad = 2.0 * Math.atan( ends_gap / VERTEX_Y );
+
+            // Work out the angle at which the mitre triggers
+            var set_theta_rad  = 2.0 * Math.asin( 1.0 / set_mitre_ratio );
+
+            // Work out X coordinates of each end of the lines being mitred (at Y=0)
+            var left_x  = VERTEX_X - ends_gap;
+            var right_x = VERTEX_X + ends_gap;
+
+            var current_mitre_ratio  = 1.0 / Math.sin( current_theta_rad / 2.0 );
+            var current_mitre_length = line_width / Math.sin( current_theta_rad / 2.0 );
+            var set_mitre_length     = line_width / Math.sin( set_theta_rad / 2.0 );
+
+            // Is current path mitreed or not?
+            var mitre_happening = (current_mitre_ratio > set_mitre_ratio);
+
+            // Manually construct the SVG path strings
+            var blue_path  = "M " + left_x + ",0 " + VERTEX_X + "," + VERTEX_Y;
+            var legs_path  = blue_path;
+            var s          = VERTEX_X + "," + VERTEX_Y + " " + right_x + ",0";
+            var green_path = "M " + s;
+            legs_path      =  legs_path + " " + s;
+            var set_mitrelimit_path = "M " + (VERTEX_X - 20) + "," + (VERTEX_Y + (current_mitre_length / 2.0)) + " " +
+                                             (VERTEX_X + 20) + "," + (VERTEX_Y + (current_mitre_length / 2.0)) + " " +
+                                      "M " + (VERTEX_X -  5) + "," + (VERTEX_Y - (current_mitre_length / 2.0)) + " " +
+                                             (VERTEX_X +  5) + "," + (VERTEX_Y - (current_mitre_length / 2.0));
+
+            document.getElementById("blue-leg").setAttribute("d", blue_path);
+            document.getElementById("green-leg").setAttribute("d", green_path);
+            document.getElementById("unmitre-path").setAttribute("d", legs_path);
+            document.getElementById("red-centreline").setAttribute("d", legs_path);
+            // document.getElementById("red-mitrelimit").setAttribute("d", set_mitrelimit_path);
+            var t = document.getElementById("mitre-path");
+            t.setAttribute("d", legs_path);
+            t.setAttribute("stroke-mitrelimit", set_mitre_ratio);
+
+            // Update text of data
+            document.getElementById("theta-angle").firstChild.nodeValue = (current_theta_rad * (180.0 / Math.PI)).toFixed(2) + "°";
+            document.getElementById("line-width").firstChild.nodeValue = parseInt(line_width);
+            document.getElementById("mitre-length").firstChild.nodeValue = current_mitre_length.toFixed(2);
+            document.getElementById("current-mitre-ratio").firstChild.nodeValue = current_mitre_ratio.toFixed(2);
+
+            t = document.getElementById("set-mitre-length");
+            if (mitre_happening) {
+                t.setAttribute("fill", "red");
+            }
+            else {
+                t.setAttribute("fill", "black");
+            }
+            t.firstChild.nodeValue = set_mitre_length.toFixed(2);
+            t = document.getElementById("set-mitre-ratio");
+            if (mitre_happening) {
+                t.setAttribute("fill", "red");
+            }
+            else {
+                t.setAttribute("fill", "black");
+            }
+            t.firstChild.nodeValue = set_mitre_ratio.toFixed(2);
+
+            t = document.getElementById("set-theta-angle");
+            if (mitre_happening) {
+                t.setAttribute("fill", "red");
+            }
+            else {
+                t.setAttribute("fill", "black");
+            }
+            t.firstChild.nodeValue = (set_theta_rad* (180.0 / Math.PI)).toFixed(2) + "°";
+
+            ends_gap = ends_gap + end_step;
+            // Make ends "bounce" from edge and centre...
+            if (ends_gap <= STEP_SIZE) {
+                end_step = +STEP_SIZE;
+                ends_gap =  STEP_SIZE;
+            }
+            else if (ends_gap > VERTEX_X) {
+                ends_gap = VERTEX_X - STEP_SIZE;
+                end_step = -STEP_SIZE;
+            }
+        } // if running
+    }
+
+    function stop_go() { 
+        if (!running) {
+            // Start running and disable inputs
+            timerId = setInterval(update, TIMER);
+            running = true;
+            document.getElementById("pause").innerHTML = "Pause &#x23E9;";
+            document.getElementById("line_width_value").disabled = true; 
+            document.getElementById("mitre_limit_ratio_value").disabled = true; 
+        }
+        else {
+            // Stop running and enable inputs
+            clearInterval(timerId)
+            running = false;
+            document.getElementById("pause").innerHTML = " Go &#x23F5;"; 
+            document.getElementById("line_width_value").disabled = false; 
+            document.getElementById("mitre_limit_ratio_value").disabled = false; 
+        }
+      } 
+     
+    timerId = setInterval(update, TIMER);
+    running = true;
+</script>
+
+<button id="pause" onclick="stop_go();" style="width:80px">Pause &#x23E9;</button>
+
+<label for="line_width_value">Line width:</label>
+<input id="line_width_value"  type="number" value="30" min="1" max="60" step="1" disabled/>
+
+<label for="mitre_limit_ratio_value">Mitre Limit ratio:</label>
+<input id="mitre_limit_ratio_value" type="number" value="4.0" min="1" max="999" step="0.1" disabled/>
+
+<svg viewBox="-20 -20 450 500" width="50%" height="50%" xmlns="http://www.w3.org/2000/svg" id="mitre-limit"
+    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <!-- grey centre of vertex where paths meet -->
+  <path id="centre-vertex"
+    stroke="gray"
+    fill="none"
+    stroke-width="0.5"
+    d="M   0,200 450,200
+       M 200,  0 200,450" />
+
+  <path id="blue-leg"
+    stroke="blue"
+    fill="none"
+    stroke-width="20"
+    stroke-linecap="butt"
+    stroke-opacity="30%"
+    d="M  50, 0
+         200, 200" />
+
+  <path id="green-leg"
+    stroke="green"
+    fill="none"
+    stroke-width="20"
+    stroke-linecap="butt"
+    stroke-opacity="30%"
+    d="M 200, 200
+         350, 0" />
+
+  <path id="mitre-path"
+    stroke="pink"
+    fill="none"
+    stroke-linejoin="mitre"
+    stroke-width="20"
+    stroke-linecap="round"
+    stroke-opacity="30%"
+    stroke-mitrelimit="4"
+    d="M 50,   0
+         200,200
+         350,  0" />
+
+  <path id="unmitre-path"
+    stroke="black"
+    fill="none"
+    stroke-linejoin="mitre"
+    stroke-width="20"
+    stroke-linecap="butt"
+    stroke-opacity="20%"
+    stroke-mitrelimit="999"
+    d="M 50,   0
+         200,200
+         350,  0" />
+
+  <!-- red centreline -->
+  <path id="red-centreline"
+    stroke="red"
+    fill="none"
+    stroke-width="0.5"
+    d="M  50,  0
+         200,200
+         350,  0" />
+
+  <!-- red mitre ratio -->
+  <!-- path id="red-mitrelimit"
+    stroke="red"
+    fill="none"
+    stroke-width="0.5"
+    d="M 180, 350
+         220, 350" / -->
+
+  <text x="20" y="300" font-size="14" fill="black">Stroke width:</text>
+  <text id="line-width" x="100" y="300" font-size="14" fill="black">X</text>
+
+  <text x="20" y="320" font-size="14" fill="black" font-style = "italic">&#952;</text>
+  <text x="28" y="320" font-size="14" fill="black">:</text>
+  <text id="theta-angle" x="35" y="320" font-size="14" fill="black">X</text>
+
+  <text x="20" y="340" font-size="14" fill="black">Current Mitre Length:</text>
+  <text id="mitre-length" x="140" y="340" font-size="14" fill="black">X</text>
+
+  <text x="20" y="360" font-size="14" fill="black">Current Mitre Ratio:</text>
+  <text id="current-mitre-ratio" x="130" y="360" font-size="14" fill="black">X</text>
+
+  <text x="20" y="380" font-size="14" fill="black">Set Mitre Length:</text>
+  <text id="set-mitre-length" x="115" y="380" font-size="14" fill="black">X</text>
+
+  <text x="20" y="400" font-size="14" fill="black">Set Mitre Ratio:</text>
+  <text id="set-mitre-ratio" x="105" y="400" font-size="14" fill="black">X</text>
+
+  <text x="20" y="420" font-size="14" fill="black">Set </text>
+  <text x="42" y="420" font-size="14" fill="black" font-style = "italic">&#952;</text>
+  <text x="50" y="420" font-size="14" fill="black">:</text>
+  <text id="set-theta-angle" x="58" y="420" font-size="14" fill="black">X</text>
+
+</main>
+
+</body>
+
+</html>

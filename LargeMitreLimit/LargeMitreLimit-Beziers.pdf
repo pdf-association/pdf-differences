@@ -1,0 +1,196 @@
+%PDF-1.7
+%%μῦ
+%
+% Copyright 2023 PDF Association, Inc. https://www.pdfa.org
+%
+% ISO 32000-2:2020
+% 8.4.3.5 Miter limit
+%
+% When the line width is zero, the miter length is zero.
+% NOTE Very large miter lengths are allowed.
+%
+
+1 0 obj
+<<
+    /Type /Catalog
+    /Outlines 2 0 R
+    /Pages 3 0 R
+>>
+endobj
+
+2 0 obj
+<<
+    /Type /Outlines
+    /Count 0
+>>
+endobj
+
+3 0 obj % Page Tree Root
+<<
+    /Type /Pages
+    /Kids [ 4 0 R ]
+    /Count 1
+>>
+endobj
+
+4 0 obj % Single Page
+<<
+    /Type /Page
+    /Parent 3 0 R
+    /MediaBox [ 0 -200 1000 1000 ]  % Note Y origin is NEGATIVE!
+    /Contents 5 0 R
+    /Resources << 
+        /ExtGState << 
+            /GS1 << /CA 0.6 >> 
+        >> 
+    >>
+>>
+endobj
+
+5 0 obj % Page content stream
+<<
+    /Length 3014  
+>>
+stream
+% Draw a black grid line every 100 units down the page
+0 G % Black
+0    0 m 1000    0 l S
+0  100 m 1000  100 l S
+0  200 m 1000  200 l S
+0  300 m 1000  300 l S
+0  400 m 1000  400 l S
+0  500 m 1000  500 l S
+0  600 m 1000  600 l S
+0  700 m 1000  700 l S
+0  800 m 1000  800 l S
+0  900 m 1000  900 l S
+
+0 0 1 RG % blue marker line at the mitre limit RATIO value
+0  333 m 1000  333 l S
+
+/GS1 gs  % set stroking alpha
+1 J      % round line cap
+
+333 M    % Mitre limit RATIO (not mitre length!)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Authored with an acute angle from triangle with 0.9 units in X vs 50 units in Y
+%% Change "xxx.9" and "xxx.1" values below to alter angle by changing the X side of the triangle.
+%% Use "PDF-MiterLimit-Calculator.xlsx" to calculate angles, mitre lengths, etc.
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Vertical straight line joined with cubic Bezier curve at Y=0
+10 w     % line width = 10
+0 j      % mitre line join
+1 0 0 RG % red stroke colour
+75 -75 m
+100 -50 l
+100   0 l % line join after here at (100,0)
+100.9 -50 150 -50 175 -25 c
+S
+0 w % narrowest stroked line
+2 j % Bevel join
+0 G % Black
+75 -75 m
+100 -50 l
+100   0 l 
+100.9 -50 150 -50 175 -25 c
+S
+% Also draw both Bezier control lines
+[ 2 ] 0 d
+100   0 m 100.9 -50 l S
+150 -50 m 175   -25 l S
+[] 0 d
+
+% Cubic Bezier curve joined with verical straight line at Y=0
+% Offset at X=200 from 1st case
+10 w     % line width = 10
+0 j      % mitre line join
+1 0 0 RG % red stroke colour
+275 -25 m
+300 -50 349.1 -50 350 0 c % line join after here at (350,0)
+350 -50 l
+375 -75 l
+S
+0 w % narrowest stroked line
+2 j % Bevel join
+0 G % Black
+275 -25 m
+300 -50 349.1 -50 350 0 c
+350 -50 l
+375 -75 l
+S
+% Also draw both Bezier control lines
+[ 2 ] 0 d
+350   0 m 349.1 -50 l S
+275 -25 m 300   -50 l S
+[] 0 d
+
+
+333.3276 M  % slightly different mitre length RATIO (not mitre length!)
+
+% Vertical straight line joined with cubic Bezier curve at Y=0
+% Offset at X=400 from 1st case
+10 w     % line width = 10
+0 j      % mitre line join
+0 1 0 RG % green stroke colour
+475 -75 m
+500 -50 l
+500   0 l % line join after here at (500,0)
+500.9 -50 550 -50 575 -25 c
+S
+0 w % narrowest stroked line
+2 j % Bevel join
+0 G % Black
+475 -75 m
+500 -50 l
+500   0 l 
+500.9 -50 550 -50 575 -25 c
+S
+% Also draw both Bezier control lines
+[ 2 ] 0 d
+500   0 m 500.9 -50 l S
+550 -50 m 575   -25 l S
+[] 0 d
+
+
+% Cubic Bezier curve joined with verical straight line at Y=0
+% Offset at X=400 from 2nd case
+10 w     % line width = 10
+0 j      % mitre line join
+0 1 0 RG % green stroke colour
+675 -25 m
+700 -50 749.1 -50 750 0 c % line join after here at (750,0)
+750 -50 l
+775 -75 l
+S
+0 w % narrowest stroked line
+2 j % Bevel join
+0 G % Black
+675 -25 m
+700 -50 749.1 -50 750 0 c
+750 -50 l
+775 -75 l
+S
+% Also draw both Bezier control lines
+[ 2 ] 0 d
+750   0 m 749.1 -50 l S
+675 -25 m 700   -50 l S
+[] 0 d
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f
+0000000241 00000 n
+0000000327 00000 n
+0000000389 00000 n
+0000000486 00000 n
+0000000748 00000 n
+trailer
+<< /Root 1 0 R /Size 6 >>
+startxref
+3848
+%%EOF

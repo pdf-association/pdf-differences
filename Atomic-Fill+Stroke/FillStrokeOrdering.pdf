@@ -1,0 +1,104 @@
+%PDF-1.7
+%‚„œ”
+%
+% Copyright 2023 PDF Association, Inc. https://www.pdfa.org
+%
+% - Fill then stroke (as two paint operations)
+% - Stroke then fill (as two paint operations)
+% - Combinaed atomic "fill and stroke"
+%
+% Opaque and constant alpha transparency examples.
+%
+1 0 obj % Document Catalog
+<<
+    /Type /Catalog
+    /Outlines 2 0 R
+    /Pages 3 0 R
+>>
+endobj
+
+2 0 obj % No outlines (bookmarks)
+<<
+    /Type /Outlines
+    /Count 0
+>>
+endobj
+
+3 0 obj % Page tree root with single page
+<<
+    /Type /Pages
+    /Kids [ 4 0 R]
+    /Count 1
+>>
+endobj
+
+4 0 obj % Page object
+<<
+    /Type /Page
+    /Parent 3 0 R
+    /MediaBox [ 0 0 150 150 ] % Page size
+    /Resources << 
+        /ExtGState << /GS1 5 0 R >> 
+    >>
+    /Contents 6 0 R
+>>
+endobj
+
+5 0 obj % Graphics state parameter dictionary "GS1"
+<< 
+    /Type /ExtGState 
+    /CA 0.3 % Constant alpha for stroking = 30%
+    /ca 0.5 % Constant alpha for filling = 50%
+>>
+endobj
+
+6 0 obj % Page Content stream
+<<
+    /Length 659 
+>>
+stream
+4 w         % thick line width for stroking
+[ 5 2 ] 0 d % dashed lines means fill outline is visible
+1 0 0 rg    % red fill
+0 1 0 RG    % green stroke
+1 j         % Round line join
+
+% Fill then stroke - opaque
+5 110 30 30 re f
+5 110 30 30 re s
+
+% Stroke then fill - opaque
+5 60 30 30 re s
+5 60 30 30 re f
+
+% Combined Stroke AND fill - opaque
+5 5 30 30 re b
+
+/GS1 gs     % set transparency via a graphics state parameter dictionary
+
+% Fill then stroke - transparency
+60 110 30 30 re f
+60 110 30 30 re s
+
+% Stroke then fill - transparency
+60 60 30 30 re s
+60 60 30 30 re f
+
+% Combined Stroke AND fill - transparency
+60 5 30 30 re b
+endstream
+endobj
+xref
+0 7
+0000000000 65535 f
+0000000278 00000 n
+0000000383 00000 n
+0000000471 00000 n
+0000000584 00000 n
+0000000791 00000 n
+0000000983 00000 n
+trailer
+<< /Root 1 0 R /Size 7 >>
+startxref
+1726
+%%EOF

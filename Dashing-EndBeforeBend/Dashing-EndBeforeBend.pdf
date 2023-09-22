@@ -1,0 +1,116 @@
+%PDF-1.7
+%%μῦ
+%
+% Copyright 2023 PDF Association, Inc. https://www.pdfa.org
+%
+% ISO 32000-2:2020
+% 8.4.3.6 Line dash pattern, new NOTE added in PDF 2.0:
+%
+% NOTE As noted in 8.5.3.2, "Stroking" and in "Table 58: Path construction
+% operators", closed paths have no end caps, but the individual dash segments 
+% of a path stroked using a non-empty line dash pattern are individually open 
+% paths and therefore receive end cap processing as specified in the graphics
+% state. If any dash segment includes a corner then that corner is painted 
+% using the current join style in the graphics state. If a corner is not 
+% contained within any dashed segment the corner is not painted.
+%
+
+1 0 obj
+<<
+  /Type /Font
+  /Subtype /Type1
+  /BaseFont /Helvetica
+>>
+endobj
+
+2 0 obj
+<<
+  /Type /Catalog
+  /Pages 3 0 R
+>>
+endobj
+
+3 0 obj
+<<
+  /Type /Pages
+  /Kids [ 4 0 R ]
+  /Count 1
+  /Resources <<
+    /Font <<
+      /F1 1 0 R
+    >>
+  >>
+>>
+endobj
+
+4 0 obj
+<<
+  /Type /Page
+  /Parent 3 0 R
+  /MediaBox [ 0 0 595.28 841.89 ]
+  /Contents 5 0 R
+>>
+endobj
+
+5 0 obj
+<<
+  /Length 1373 >>
+stream
+    BT
+         /F1 14 Tf
+         1 0 0 1 20 680 Tm
+         ("End before bend" end caps when corners coincide with a dash end.) Tj
+         1 0 0 1 20 660 Tm
+         (End caps also apply at mid-dash, not just at start/end points.) Tj
+         1 0 0 1 20 640 Tm
+         (Same dash pattern [20 20] 0 for 3 different end cap styles.)  '
+    ET
+    10 w
+    [20 20] 0 d
+
+    0 J % Butt cap
+    100 80 m 100 180 l 500 180 l 500 79.99999 l S
+    
+    1 J % Round cap
+    100 280 m 100 380 l 500 380 l 500 279.99999 l S
+    
+    2 J % Projecting square cap
+    100 480 m 100 580 l 500 580 l 500 479.99999 l S
+    
+    0 0 1 RG % blue stroke
+
+    0 J % Butt cap
+    140 80 m 140 160 l 459.99999 160 l 459.99999 79.99999 l S
+    
+    1 J % Round cap
+    140 280 m 140 360 l 459.99999 360 l 459.99999 279.99999 l S
+    
+    2 J % Projecting square cap
+    140 480 m 140 560 l 459.99999 560 l 459.99999 479.9999 l S
+
+    % thin red center lines    
+    0 w
+    1 0 0 RG % red stroke
+    [] 0 d
+    100 80 m 100 180 l 500 180 l 500 79.99999 l S
+    100 280 m 100 380 l 500 380 l 500 279.99999 l S
+    100 480 m 100 580 l 500 580 l 500 479.99999 l S
+    140 80 m 140 160 l 459.99999 160 l 459.99999 79.99999 l S
+    140 280 m 140 360 l 459.99999 360 l 459.99999 279.99999 l S
+    140 480 m 140 560 l 459.99999 560 l 459.99999 479.99999 l S
+endstream
+endobj
+
+xref
+0 6
+0000000000 65535 f
+0000000692 00000 n
+0000000769 00000 n
+0000000823 00000 n
+0000000946 00000 n
+0000001050 00000 n
+trailer
+<< /Root 2 0 R /Size 6 >>
+startxref
+2477
+%%EOF

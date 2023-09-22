@@ -1,0 +1,2 @@
+# Ensure PDFs always stay as binary
+*.pdf binary
