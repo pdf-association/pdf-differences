@@ -1,6 +1,6 @@
 # Large Mitre Limit
 
-_NOTE: for consistency with future ISO requirements, this article uses the International English spelling "mitre", whereas PDF specifications use the US spelling "mitre". There is no difference in meaning. This will be corrected in a future ISO publication._ 
+_NOTE: for consistency with future ISO requirements, this article uses the International English spelling "mitre", whereas PDF specifications use the US spelling "miter". There is no difference in meaning. This will be corrected in a future ISO publication._ 
 
 The development of ISO 32000-2 was the first opportunity for a rigorous vendor-neutral review of the entire PDF specification in an open, consensus-based forum. As a result, many undocumented areas, issues and errors were corrected. Sometimes these were just small wording changes or the addition of a sentence. This is one such correction that not every implementer noticed.
 
