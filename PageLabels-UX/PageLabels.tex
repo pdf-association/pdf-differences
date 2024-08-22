@@ -1,0 +1,82 @@
+\DocumentMetadata {pdfversion=1.7, xmp=false, lang=en-AU, uncompress}
+
+\documentclass{article}
+\usepackage{hyperref}
+\usepackage{xistercian}
+\usepackage{zhnumber}
+\usepackage{fontspec}
+%\setmainfont{Arial}
+\setmainfont{FandolSong-Regular} % font with Chinese chars - needed here for ToC
+
+\begin{document}
+
+\title{Test for PDF Output from Overleaf}
+\author{Peter Wyatt}
+\date{July 2024}
+\maketitle
+
+% Insert a table of contents
+\tableofcontents
+
+\section{Arabic page numbers}
+Arabic 1 \newpage 
+Arabic 2 \newpage 
+Arabic 3 \newpage
+
+\pagenumbering{roman}
+\section{Lowercase Roman page numbers}
+Lowercase roman 1 \newpage 
+Lowercase roman 2 \newpage 
+Lowercase roman 3 \newpage
+
+\pagenumbering{Roman}
+\section{Uppercase Roman page numbers}
+Uppercase Roman 1 \newpage 
+Uppercase Roman 2 \newpage 
+Uppercase Roman 3 \newpage
+
+\pagenumbering{alph}
+\section{Lowercase alphabetic indicators}
+Lowercase alpha 1 \newpage 
+Lowercase alpha 2 \newpage 
+Lowercase alpha 3 \newpage
+
+\pagenumbering{Alph}
+\section{Uppercase alphabetic indicators starting from 10}
+\setcounter{page}{10}
+Uppercase Alpha 10 \newpage 
+Uppercase Alpha 11 \newpage 
+Uppercase Alpha 12 \newpage
+
+% Unicode page label prefix ("λέγ" = "leg" in Greek)
+% Correct font must be used in LaTeX (Arial works, but FandolSong-Regular has issues.
+\pagenumbering{arabic} \renewcommand \thepage{λέγ-\arabic{page}}
+\section{Greek prefix text with Arabic page number}
+Page number with Greek text 1 \newpage 
+Page number with Greek text 2 \newpage 
+Page number with Greek text 3 \newpage
+
+% https://en.wikipedia.org/wiki/Cistercian_numerals
+% NOT SUPPORTED BY PDF Page Labels as symbology is not supported by Unicode. 
+% See https://www.unicode.org/L2/L2020/20290-cistercian-digits.pdf
+% Thus LaTeX uses a Roman alphabet descriptive prefix alternative.
+\pagenumbering{cistercian}
+\section{Cistercian page numbers}
+Cistercian 1 \newpage 
+Cistercian 2 \newpage 
+Cistercian 3 \newpage
+
+% Relies on individual Page Label dictionary entries for each page with 
+% only an appropriate /P Unicode string and without any /S or /St entries:
+%  "There is no default numbering style; if no S entry is present, page 
+%  labels shall consist solely of a label prefix with no numeric portion"
+% (from ISO 32000-2:2020, Table 161, S entry) 
+%\setmainfont{FandolSong-Regular} % font with Traditional Chinese chars
+\pagenumbering{zhnum}
+\section{Traditional Chinese page numbers starting from 7}
+\setcounter{page}{7}
+Chinese 1 \newpage
+Chinese 2 \newpage
+Chinese 3 \newpage
+
+\end{document}

@@ -1,0 +1,439 @@
+%PDF-1.7
+%‚„œ”
+%
+% Copyright 2024 PDF Association, Inc. https://pdfa.org
+%
+% Page Labels test as per ISO 32000-2:2020, 12.4.2 Page labels and indices
+
+1 0 obj
+<<
+  /Type /Catalog
+  /Pages 2 0 R
+  /PageLayout /OneColumn       % show pages as a continuous series
+  /PageMode /UseThumbs         % Thumbnails can see page identifying text
+  /ViewerPreferences << /FitWindow true >> % make the whole page fit
+  /PageLabels <<
+    /Nums [                    % Page Label number tree: 
+             0 << /S /r >>                            % Page indices 0 - 3: lowercase Roman numerals starting at 1 (i, ii, iii, iv)
+             4 << /S /D >>                            % Page indices 4 - 7: Western Arabic numbers starting at 1   (1, 2, 3, 4)
+             8 <<   /St 4 /P <FEFF 0664> >>           % Page indices 8 - 11: Eastern Arabic numerals starting at 4 - see https://en.wikipedia.org/wiki/Eastern_Arabic_numerals
+               9 << /St 5 /P <FEFF 0665> >>           % <UTF-16BE Bom> U+0665
+              10 << /St 6 /P <FEFF 0666> >>           % <UTF-16BE Bom> U+0666
+              11 << /St 7 /P <FEFF 0667> >>           % <UTF-16BE Bom> U+0667
+            12 << /S /D /St 11 /P ( Long Label - ) >> % Page indices 12 - end: Western Arabic with inconvenient prefix starting at 11 
+          ]                                           %     (" Long Label - 11", " Long Label - 12", ...)
+  >>
+>>
+endobj
+
+2 0 obj
+<<
+  /Type /Pages
+  /Resources << % Shared font resource for simplicity
+    /Font << 
+      /Helv << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+    >> 
+  >> 
+  /Kids [  3 0 R   4 0 R   5 0 R   6 0 R % Pages  1- 4 (indices  0 -  3): lowercase Roman numerals starting at 1 (i, ii, iii, iv)
+           7 0 R   8 0 R   9 0 R  10 0 R % Pages  5- 8 (indices  4 -  7): Western Arabic numbers starting at 1   (1, 2, 3, 4)
+          11 0 R  12 0 R  13 0 R  14 0 R % Pages  9-12 (indices  8 - 11): Eastern Arabic numerals starting at 4
+          15 0 R  16 0 R  17 0 R  18 0 R % Pages 13-16 (indices 12 -end): Western Arabic numbers with inconvenient prefix starting at 11
+        ]                                %             (" Long Label - 11", " Long Label - 12", ...)
+  /Count 16
+>>
+endobj
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Pages 1-4 (indices 0-3): lowercase Roman numerals starting at 1 (i, ii, iii, iv)
+
+3 0 obj % Page 1 - matching content stream is always (object number + 16)
+<<
+  /Type /Page
+  /Parent 2 0 R
+  /MediaBox [ 0 0 500 500 ] 
+  /Contents 19 0 R
+>>
+endobj
+
+19 0 obj % Page 1 Content stream
+<< /Length 74 >>
+stream
+BT
+  1 0 0 1 50 400 Tm
+  /Helv 20 Tf
+  (Page 1, index 0 = "i") Tj
+ET
+endstream
+endobj
+
+4 0 obj % Page 2
+<<
+  /Type /Page
+  /Parent 2 0 R
+  /MediaBox [ 0 0 500 500 ] 
+  /Contents 20 0 R
+>>
+endobj
+
+20 0 obj % Page 2 Content stream
+<< /Length 75 >>
+stream
+BT
+  1 0 0 1 50 400 Tm
+  /Helv 20 Tf
+  (Page 2, index 1 = "ii") Tj
+ET
+endstream
+endobj
+
+5 0 obj % Page 3
+<<
+  /Type /Page
+  /Parent 2 0 R
+  /MediaBox [ 0 0 500 500 ] 
+  /Contents 21 0 R
+>>
+endobj
+
+21 0 obj % Page 3 Content stream
+<< /Length 76 >>
+stream
+BT
+  1 0 0 1 50 400 Tm
+  /Helv 20 Tf
+  (Page 3, index 2 = "iii") Tj
+ET
+endstream
+endobj
+
+6 0 obj % Page 4
+<<
+  /Type /Page
+  /Parent 2 0 R
+  /MediaBox [ 0 0 500 500 ] 
+  /Contents 22 0 R
+>>
+endobj
+
+22 0 obj % Page 4 Content stream
+<< /Length 75 >>
+stream
+BT
+  1 0 0 1 50 400 Tm
+  /Helv 20 Tf
+  (Page 4, index 3 = "iv") Tj
+ET
+endstream
+endobj
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Pages 5-8 (indices 4-7): Western Arabic numbers starting at 1   (1, 2, 3, 4)
+
+7 0 obj % Page 5
+<<
+  /Type /Page
+  /Parent 2 0 R
+  /MediaBox [ 0 0 500 500 ] 
+  /Contents 23 0 R
+>>
+endobj
+
+23 0 obj % Page 5 Content stream
+<< /Length 74 >>
+stream
+BT
+  1 0 0 1 50 400 Tm
+  /Helv 20 Tf
+  (Page 5, index 4 = "1") Tj
+ET
+endstream
+endobj
+
+8 0 obj % Page 6
+<<
+  /Type /Page
+  /Parent 2 0 R
+  /MediaBox [ 0 0 500 500 ] 
+  /Contents 24 0 R
+>>
+endobj
+
+24 0 obj % Page 6 Content stream
+<< /Length 74 >>
+stream
+BT
+  1 0 0 1 50 400 Tm
+  /Helv 20 Tf
+  (Page 6, index 5 = "2") Tj
+ET
+endstream
+endobj
+
+9 0 obj % Page 7
+<<
+  /Type /Page
+  /Parent 2 0 R
+  /MediaBox [ 0 0 500 500 ] 
+  /Contents 25 0 R
+>>
+endobj
+
+25 0 obj % Page 7 Content stream
+<< /Length 73 >>
+stream
+BT
+  1 0 0 1 50 400 Tm
+  /Helv 20 Tf
+  (Page 7, index 6 = "3") Tj
+ET
+endstream
+endobj
+
+10 0 obj % Page 8
+<<
+  /Type /Page
+  /Parent 2 0 R
+  /MediaBox [ 0 0 500 500 ] 
+  /Contents 26 0 R
+>>
+endobj
+
+26 0 obj % Page 8 Content stream
+<< /Length 73 >>
+stream
+BT
+  1 0 0 1 50 400 Tm
+  /Helv 20 Tf
+  (Page 8, index 7 = "4") Tj
+ET
+endstream
+endobj
+
+10 0 obj % Page 8
+<<
+  /Type /Page
+  /Parent 2 0 R
+  /MediaBox [ 0 0 500 500 ] 
+  /Contents 26 0 R
+>>
+endobj
+
+26 0 obj % Page 8 Content stream
+<< /Length 73 >>
+stream
+BT
+  1 0 0 1 50 400 Tm
+  /Helv 20 Tf
+  (Page 8, index 7 = "4") Tj
+ET
+endstream
+endobj
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Pages 9-12 (indices 8 -11): Eastern Arabic numerals starting at 4
+
+11 0 obj % Page 9
+<<
+  /Type /Page
+  /Parent 2 0 R
+  /MediaBox [ 0 0 500 500 ] 
+  /Contents 27 0 R
+>>
+endobj
+
+27 0 obj % Page 9 Content stream
+<< /Length 87 >>
+stream
+BT
+  1 0 0 1 50 400 Tm
+  /Helv 20 Tf
+  (Page 9, index 8 = Eastern Arabic 4) Tj
+ET
+endstream
+endobj
+
+12 0 obj % Page 10
+<<
+  /Type /Page
+  /Parent 2 0 R
+  /MediaBox [ 0 0 500 500 ] 
+  /Contents 28 0 R
+>>
+endobj
+
+28 0 obj % Page 10 Content stream
+<< /Length 88 >>
+stream
+BT
+  1 0 0 1 50 400 Tm
+  /Helv 20 Tf
+  (Page 10, index 9 = Eastern Arabic 5) Tj
+ET
+endstream
+endobj
+
+13 0 obj % Page 11
+<<
+  /Type /Page
+  /Parent 2 0 R
+  /MediaBox [ 0 0 500 500 ] 
+  /Contents 29 0 R
+>>
+endobj
+
+29 0 obj % Page 11 Content stream
+<< /Length 89 >>
+stream
+BT
+  1 0 0 1 50 400 Tm
+  /Helv 20 Tf
+  (Page 11, index 10 = Eastern Arabic 6) Tj
+ET
+endstream
+endobj
+
+14 0 obj % Page 12
+<<
+  /Type /Page
+  /Parent 2 0 R
+  /MediaBox [ 0 0 500 500 ] 
+  /Contents 30 0 R
+>>
+endobj
+
+30 0 obj % Page 12 Content stream
+<< /Length 89 >>
+stream
+BT
+  1 0 0 1 50 400 Tm
+  /Helv 20 Tf
+  (Page 12, index 11 = Eastern Arabic 7) Tj
+ET
+endstream
+endobj
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Page indices 12-end: Western Arabic with inconvenient prefix starting at 11 (" Long Label - 11", " Long Label - 12", ...)
+
+15 0 obj % Page 13
+<<
+  /Type /Page
+  /Parent 2 0 R
+  /MediaBox [ 0 0 500 500 ] 
+  /Contents 31 0 R
+>>
+endobj
+
+31 0 obj % Page 13 Content stream
+<< /Length 90 >>
+stream
+BT
+  1 0 0 1 50 400 Tm
+  /Helv 20 Tf
+  (Page 13, index 12 = " Long Label - 11") Tj
+ET
+endstream
+endobj
+
+16 0 obj % Page 14
+<<
+  /Type /Page
+  /Parent 2 0 R
+  /MediaBox [ 0 0 500 500 ] 
+  /Contents 32 0 R
+>>
+endobj
+
+32 0 obj % Page 14 Content stream
+<< /Length 91 >>
+stream
+BT
+  1 0 0 1 50 400 Tm
+  /Helv 20 Tf
+  (Page 14, index 13 = " Long Label - 12") Tj
+ET
+endstream
+endobj
+
+17 0 obj % Page 15
+<<
+  /Type /Page
+  /Parent 2 0 R
+  /MediaBox [ 0 0 500 500 ] 
+  /Contents 33 0 R
+>>
+endobj
+
+33 0 obj % Page 15 Content stream
+<< /Length 91 >>
+stream
+BT
+  1 0 0 1 50 400 Tm
+  /Helv 20 Tf
+  (Page 15, index 14 = " Long Label - 13") Tj
+ET
+endstream
+endobj
+
+18 0 obj % Page 16
+<<
+  /Type /Page
+  /Parent 2 0 R
+  /MediaBox [ 0 0 500 500 ] 
+  /Contents 34 0 R
+>>
+endobj
+
+34 0 obj % Page 16 Content stream
+<< /Length 91 >>
+stream
+BT
+  1 0 0 1 50 400 Tm
+  /Helv 20 Tf
+  (Page 16, index 15 = " Long Label - 14") Tj
+ET
+endstream
+endobj
+
+xref 
+0 35
+0000000000 65535 f
+0000000158 00000 n
+0000001433 00000 n
+0000002426 00000 n
+0000002756 00000 n
+0000003030 00000 n
+0000003305 00000 n
+0000003743 00000 n
+0000004016 00000 n
+0000004289 00000 n
+0000004836 00000 n
+0000005253 00000 n
+0000005540 00000 n
+0000005830 00000 n
+0000006121 00000 n
+0000006665 00000 n
+0000006958 00000 n
+0000007251 00000 n
+0000007544 00000 n
+0000002601 00000 n
+0000002874 00000 n
+0000003148 00000 n
+0000003423 00000 n
+0000003861 00000 n
+0000004134 00000 n
+0000004407 00000 n
+0000004955 00000 n
+0000005372 00000 n
+0000005660 00000 n
+0000005950 00000 n
+0000006241 00000 n
+0000006785 00000 n
+0000007078 00000 n
+0000007371 00000 n
+0000007664 00000 n
+trailer
+<< /Root 1 0 R /Size 35 >>
+startxref
+7837
+%%EOF
