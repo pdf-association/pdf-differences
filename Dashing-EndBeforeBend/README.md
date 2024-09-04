@@ -13,12 +13,16 @@ ISO 32000-2 subclause 8.4.3.6 "Line dash pattern" also had a new NOTE that was n
 
 ## Wrong appearances
 
+![Incorrect: 'Bend before end' construction](BendBeforeEnd.gif "Incorrect: 'Bend before end' construction animation")
+
 Also note that changing the zoom factor of many viewers can alter how this file is rendered! This fails the device independent rendering that PDF requires!
 
 ![Wrong ouput](EndBeforeBend-wrong1.png "Wrong!")
 ![A different type of wrong](EndBeforeBend-wrong2.png "Wrong again!")
 
 ## Correct appearance
+
+![Correct: 'End before bend' construction](EndBeforeBend.gif "Correct: 'End before bend' construction animation") 
 
 Although aspects of this image may appear like "undesirable artifacts", it is in fact precisely correct as both the "on" and "off" dash segments have the "End before Bend" rule applied which thus causes an "on" dash to restart just _prior_ to bending around a corner.
 
