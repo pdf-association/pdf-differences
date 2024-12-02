@@ -13,4 +13,4 @@ As described throughout ISO 32000-2:2020, clause 9 "Text", handling of vertical 
 # Test file
 
 [VerticalText.pdf](VerticalText.pdf)
-Renders Japanese vertical text using a non-embedded font with appropriate font and font descriptor entries for vertical writing.
+Renders Japanese vertical text using a non-embedded font with appropriate font and font descriptor entries for vertical writing. Because there is no embedded font in this PDF, a substitute font supporting vertical writing is required to be present. 
