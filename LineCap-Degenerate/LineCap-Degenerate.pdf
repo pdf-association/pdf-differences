@@ -1,0 +1,145 @@
+%PDF-1.7
+%����
+
+1 0 obj
+<<
+/Type /Catalog
+/Pages 2 0 R
+>>
+endobj
+
+2 0 obj
+<<
+/Type /Pages
+/Kids [3 0 R]
+/Count 1
+>>
+endobj
+
+3 0 obj
+<<
+/Type /Page
+/Parent 2 0 R
+/MediaBox [0 0 400 400]
+/Contents [4 0 R]
+/Resources <</Font <</Helv 5 0 R >> >>
+/UserUnit 10
+>>
+endobj
+
+4 0 obj
+<<
+/Length 924
+>>
+stream
+q
+0.5 w 0 g 1 j 1 J
+10 390 m 180 390 l
+10 380 m 180 380 l
+10 360 m 180 360 l
+10 340 m 180 340 l
+10 320 m 180 320 l
+10 390 m 10 320 l
+30 390 m 30 320 l
+80 390 m 80 320 l
+130 390 m 130 320 l 
+180 390 m 180 320 l S
+BT
+/Helv 8 Tf
+50 382 Td (0 j) Tj
+50 0 Td (1 j) Tj
+50 0 Td (2 j) Tj
+ET
+BT
+/Helv 8 Tf
+11 366 Td (0 J) Tj
+0 -20 Td (1 J) Tj
+0 -20 Td (2 J) Tj
+ET
+Q
+
+q
+0 0 0 rg 5 w
+
+q
+0 j 0 J 
+1 0 0 1 50 370 cm
+0 0 m h 10 0 m h S
+Q
+
+q
+1 j 0 J 
+1 0 0 1 100 370 cm
+0 0 m h 10 0 m h S
+Q
+
+q
+2 j 0 J 
+1 0 0 1 150 370 cm
+0 0 m h 10 0 m h S
+Q
+
+q
+0 j 1 J 
+1 0 0 1 50 350 cm
+0 0 m h 10 0 m h S
+Q
+
+q
+1 j 1 J 
+1 0 0 1 100 350 cm
+0 0 m h 10 0 m h S
+Q
+
+q
+2 j 1 J 
+1 0 0 1 150 350 cm
+0 0 m h 10 0 m h S
+Q
+
+q
+0 j 2 J 
+1 0 0 1 50 330 cm
+0 0 m h 10 0 m h S
+Q
+
+q
+1 j 2 J 
+1 0 0 1 100 330 cm
+0 0 m h 10 0 m h S
+Q
+
+q
+2 j 2 J 
+1 0 0 1 150 330 cm
+0 0 m h 10 0 m h S
+Q
+
+Q
+endstream
+endobj
+
+5 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+>>
+endobj
+xref
+0 6
+0000000000 65535 f
+0000000027 00000 n
+0000000084 00000 n
+0000000150 00000 n
+0000000303 00000 n
+0000001286 00000 n
+trailer
+<<
+/Size 6
+/Root 1 0 R
+>>
+startxref
+1391
+%%EOF
