@@ -8,7 +8,7 @@
 
 This is a _public_ (repository for responsible reporting of commonly-seen PDF issues. The PDF files in this repository are targeted test files highlighting specific issues seen across multiple widely-used implementations. Implementations at fault will **not** be named or identified.
 
-The issues identified in this repository are **not** security related - they impact portability and interoperability; PDF's "prime directive"!
+The issues identified in this repository are **not** intrinsically related to security - they primarily impact portability and interoperability; PDF's "prime directive"!
 
 Detailed documentation for each test case is provided as MarkDown files and in an associated article on https://www.pdfa.org. 
 
