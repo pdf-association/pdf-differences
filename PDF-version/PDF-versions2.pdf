@@ -1,0 +1,78 @@
+%PDF-1.4
+%����
+
+1 0 obj
+<<
+    /Type       /Catalog
+    /Pages      2 0 R
+    /Version    /1.5    % Updates header from PDF 1.4 to PDF 1.5
+>>
+endobj
+
+2 0 obj
+<<
+    /Type       /Pages
+    /Kids       [ 3 0 R ]
+    /Count      1
+>>
+endobj
+
+3 0 obj         % Single page
+<<
+    /Type       /Page
+    /Parent     2 0 R
+    /MediaBox   [ 0 0 100 100 ]
+    /Contents   4 0 R
+    /Resources  << >>
+>>
+endobj
+
+4 0 obj
+<< 
+  /Length 64
+>>
+stream
+    4 w
+    1 0 0 rg
+    0 0 1 RG
+    10 10 80 80 re
+    B
+endstream
+endobj
+
+xref
+0 5
+0000000000 65535 f
+0000000027 00000 n
+0000000169 00000 n
+0000000266 00000 n
+0000000440 00000 n
+trailer
+<<
+  /Root 1 0 R
+  /Size 5
+>>
+startxref
+565
+%%EOF
+5 0 obj
+<<
+    /Type       /Catalog
+    /Pages      2 0 R
+    /Version    /1.6    % Incremental update changes file to PDF 1.6
+>>
+endobj
+xref
+1 1
+0000000000 65535 f
+5 1
+0000000742 00000 n
+trailer
+<<
+  /Root 5 0 R
+  /Size 6
+  /Prev 565 
+>>
+startxref
+886
+%%EOF
