@@ -1,10 +1,6 @@
 # PDF Differences
 
 ![LinkedIn](https://img.shields.io/static/v1?style=social&label=LinkedIn&logo=linkedin&message=PDF-Association)
-&nbsp;&nbsp;&nbsp;
-![Twitter Follow](https://img.shields.io/twitter/follow/PDFAssociation?style=social)
-&nbsp;&nbsp;&nbsp;
-![YouTube Channel Subscribers](https://img.shields.io/youtube/channel/subscribers/UCJL_M0VH2lm65gvGVarUTKQ?style=social)
 
 This is a _public_ (repository for responsible reporting of commonly-seen PDF issues. The PDF files in this repository are targeted test files highlighting specific issues seen across multiple widely-used implementations. Implementations at fault will **not** be named or identified.
 
